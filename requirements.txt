@@ -1,0 +1,21 @@
+# Core app
+streamlit>=1.37,<2
+SQLAlchemy>=2.0,<3
+python-dotenv>=1.0
+bcrypt>=4.0,<5
+PyJWT[crypto]>=2.8
+reportlab>=4.0            # PDF practice record
+pypdf>=4.0               # extract text from uploaded PDFs (fallback rendering)
+PyMuPDF>=1.24            # render uploaded PDF guides/guidelines as page images for in-app display
+
+# PostgreSQL driver (Railway). psycopg v3; [binary] ships prebuilt wheels so no local build tools
+# are needed on Windows. SQLAlchemy uses the postgresql+psycopg dialect.
+psycopg[binary]>=3.1,<4
+
+# Production LMS companion (LTI 1.3 + H5P serving/xAPI). Optional for local learner/admin use.
+fastapi>=0.110
+uvicorn[standard]>=0.29
+requests>=2.31
+
+# Tests
+pytest>=8.0

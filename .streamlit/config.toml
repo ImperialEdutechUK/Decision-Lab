@@ -1,0 +1,18 @@
+[theme]
+base = "light"
+primaryColor = "#0f8a84"
+backgroundColor = "#f4f5f7"
+secondaryBackgroundColor = "#ffffff"
+textColor = "#13293d"
+font = "sans serif"
+
+[server]
+headless = true
+# Railway sets $PORT; the start command passes --server.port $PORT --server.address 0.0.0.0.
+# XSRF/CORS defaults are kept on - learners arrive by top-level redirect from the LMS, not in an
+# iframe, so protection stays enabled.
+enableXsrfProtection = true
+enableCORS = true
+
+[browser]
+gatherUsageStats = false
